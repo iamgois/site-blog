@@ -1,21 +1,12 @@
-import Image from "next/image";
+
 import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-950 font-sans`}
-    ><h2 className="text-white">Hello World!</h2>
+    <div>
+      <h2>Hello World!</h2>
+      <Link href='/users'>Users</Link>
     </div>
   );
 }
